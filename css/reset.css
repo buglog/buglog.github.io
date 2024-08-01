@@ -1,0 +1,12 @@
+
+:root {font-size: 18pt; font-family: 'Crimson Text', serif;}
+
+body,
+body * {
+	margin: 		 unset;
+	box-sizing: 	 unset;
+	padding: 		 unset;
+	font-size: 		 unset;
+	color: 			 unset;
+	text-decoration: unset;
+}
