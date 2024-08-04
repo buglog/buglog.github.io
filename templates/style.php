@@ -15,9 +15,9 @@
 		bg * { color: #fff2eb; }
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
 		article {margin-top: 0.5rem;}
-		h1   { font: bold 1.1rem "Helvetica"; } 	/*CARTOON ASSETS*/
+		h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
 		h2   { font: bold 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
-		h3   { font: 400  1.2rem "Helvetica"; background-color: #000000; color:#FF00FD } /* purple on black box */
+		h3   { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD } /* LINKS */
 		h4   { font: 400  1.1rem "Helvetica"; background-color:dimgrey; color: springgreen; margin-bottom: 0.1rem; } /* green on black box- for little "examples" */
 		h5   { font: 400  1.0rem "Helvetica"; background-color:blue; color:white; } /* White on blue-- the directory, links, whatever... */
 		h6   { font: 400  1.5rem "Helvetica"; background-color:black; color:yellow; } /* Yellow on yellow- see how this pans out lol */ 
@@ -28,8 +28,9 @@
 		/* { margin-bottom: 2.0rem; } */
 		img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
 		/* when you hover over a link, it turns purple with green bg */
-		a { box-shadow: inset 0 -0.28em black }
+		/* a { box-shadow: inset 0 -0.28em black } */
 		a:hover {color:black; background-color:#EAFF1D;}
+		a:visited { color: purple; }
 		
 		#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
     #p2 { font: 400 1.0rem "Helvetica"; color:blue;}
