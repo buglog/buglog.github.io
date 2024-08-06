@@ -4,7 +4,7 @@ p {color:black;}
 }
 article {
     display: grid;
-    grid-template-columns: 0.5in [start] 1.25in 9in 1.25in [end] 1fr;
+    grid-template-columns: .5in [start] 1.25in 9in 1.25in [end] 1fr;
 }
 article * {grid-column: start/end;}
 @media (max-width: 8.5in) {

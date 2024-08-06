@@ -3,11 +3,12 @@
 
 <main>
     <article>
-    <div id = "bigbig">
+        <section>
         <h2>SECTION 1</h2>
         <p>You. werena kjasdfakdj nfalsdfalskdf alksjdflkasdflkasflasdfliuasndkfu 
-            dsu aasl dkjfaisydfh ilasdfuwef kjnbl dsiuhalsdfublawefuibjsdjybf awkybaweuyfbawuyefbajsdbfakuyebfawyjfbawe</p>
-    </div>
+            dsu aasl dkjfaisydfh ilasdfuwef kjnbl dsiuhalsdfublawefuibjsdjybf awkybaweuyfbawuyefbajsdbfakuyebfawyjfbawe
+        </p>
+    </section>
     <section>
         <h2>Section 2</h2>
         <p>yourself.</p>

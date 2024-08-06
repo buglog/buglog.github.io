@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-<?php include 'style.php'; ?>
+	<?php include 'style.php'; ?>
 </head>
 <body>
     <header>

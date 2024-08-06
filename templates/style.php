@@ -42,11 +42,11 @@
     div.ex1 {
 		height:500px;
 		overflow:scroll;
-	}
-    
-	</style>
+	}   
+</style>
+
 	<!-- Making Columns -->
-	<style>
+<style>
 		*{
 		box-sizing: border-box;
 		}
