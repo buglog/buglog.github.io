@@ -1,7 +1,6 @@
 
 <?php include 'templates/header.php'; ?>
-
-<main>
+<body>
     <article>
         <section>
         <h2>SECTION 1</h2>
@@ -14,8 +13,8 @@
         <p>yourself.</p>
     </section>
     </article>
+</body>
     <!-- Add more sections as needed -->
-</main>
 
 <?php include 'templates/table.php'; ?>
 <?php include 'templates/footer.php'; ?>

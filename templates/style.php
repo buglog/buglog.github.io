@@ -1,4 +1,7 @@
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 	<link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Crimson+Text:600">
 	<link rel="stylesheet" href= "css/reset.css">
 	<!-- just replace with "css/debug.css" to see squares. -->
@@ -10,7 +13,14 @@
 	<!-- Choosing the colors, fonts and sizes of the html elements we're gonna use. -->
 	<style>
 
+		html { font-size: 100%; }
+
 		body { background-color: #fff2eb; /* Replace with your desired color */ }
+		/* Larger font size for mobile devices */
+		/* FIX! vv */
+		@media only screen and (max-width:767px) { html { font-size:200%; } body {background-color:blue;} }
+
+	
 
 		bg * { color: #fff2eb; }
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
@@ -33,7 +43,7 @@
 		a:visited { color: purple; }
 		
 		#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
-    #p2 { font: 400 1.0rem "Helvetica"; color:blue;}
+   		#p2 { font: 400 1.0rem "Helvetica"; color:blue;}
     .blueText
     {
       color: #FF00FD; background-color: black;
