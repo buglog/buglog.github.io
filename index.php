@@ -1,7 +1,9 @@
 
 <?php include 'templates/style.php'; ?>
+
 <?php include 'templates/header.php'; ?>
 
+<article>
 <?php
 $baseDir = __DIR__ . '/p'; // Path to your subfolders
 $baseUrl = 'p'; // Relative URL path
@@ -25,7 +27,7 @@ foreach ($subfolders as $folderPath) {
 // Join with a hollow dot separator ∘ (U+2218)
 echo '<div class="folder-links">' . implode(' <span class="dot-separator">&#8728;</span> ', $links) . '</div>';
 ?>
-
+</article>
 
 <?php include 'templates/table.php'; ?>
 <?php include 'templates/footer.php'; ?>

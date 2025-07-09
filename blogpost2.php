@@ -1,4 +1,5 @@
 
+<?php include 'templates/style.php'; ?>
 <?php include 'templates/header.php'; ?>
 <body>
     <article>

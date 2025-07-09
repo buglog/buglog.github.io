@@ -77,17 +77,9 @@
 </style>
 
 <style>
-	.folder-links {
-  margin: 20px 0;
-}
+	.folder-links { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
 
-.folder-link {
-  color: blue;
-  text-decoration: none;
-}
+	.folder-link { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
 
-.dot-separator {
-  margin: 0 5px;
-  color: gray;
-}
-	</style>
+	.dot-separator{ font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
+</style>
