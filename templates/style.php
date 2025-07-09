@@ -1,7 +1,5 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
 	<link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Crimson+Text:600">
 	<link rel="stylesheet" href= "css/reset.css">
 	<!-- just replace with "css/debug.css" to see squares. -->
@@ -14,13 +12,10 @@
 	<style>
 
 		html { font-size: 100%; }
-
 		body { background-color: #fff2eb; /* Replace with your desired color */ }
 		/* Larger font size for mobile devices */
 		/* FIX! vv */
 		@media only screen and (max-width:767px) { html { font-size:200%; } body {background-color:blue;} }
-
-	
 
 		bg * { color: #fff2eb; }
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
@@ -80,3 +75,19 @@
 	  	clear: both;
 		}
 </style>
+
+<style>
+	.folder-links {
+  margin: 20px 0;
+}
+
+.folder-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.dot-separator {
+  margin: 0 5px;
+  color: gray;
+}
+	</style>
