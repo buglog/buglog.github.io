@@ -14,18 +14,27 @@ $links = [];
 
 foreach ($subfolders as $folderPath) {
     $folderName = basename($folderPath);
-    $indexFile = "$folderPath/index.php";
-    //$jsonFiles = glob("$folderPath/*.json");
 
-    if (file_exists($indexFile) /*&& !empty($jsonFiles)*/) {
-        $link = "$baseUrl/$folderName/index.php";
+    // Look for any .php or .html file in the folder
+    $phpFiles = glob("$folderPath/*.php");
+    $htmlFiles = glob("$folderPath/*.html");
+
+    $files = array_merge($phpFiles, $htmlFiles);
+
+    if (!empty($files)) {
+        // Use the first file found as the link target
+        $firstFile = basename($files[0]);
+        $link = "$baseUrl/$folderName/$firstFile";
         $links[] = "<a href=\"$link\" class=\"folder-link\">$folderName</a>";
     }
 }
 
-
 // Join with a hollow dot separator ∘ (U+2218)
-echo '<div class="folder-links">' . implode(' <span class="dot-separator">&#8728;</span> ', $links) . '</div>';
+if (!empty($links)) {
+    echo '<div class="folder-links">' . implode(' <span class="dot-separator">&#8728;</span> ', $links) . '</div>';
+} else {
+    echo '<p>No folders with .php or .html files found.</p>';
+}
 ?>
 </article>
 
