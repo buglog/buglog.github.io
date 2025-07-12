@@ -22,7 +22,7 @@
 		article {margin-top: 0.5rem;}
 		h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
 		h2   { font: bold 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
-		h3   { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD } /* LINKS */
+		h3   { font: 300  0.9rem /*0.63rem */ "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD } /* LINKS */
 		h4   { font: 400  1.1rem "Helvetica"; background-color:dimgrey; color: springgreen; margin-bottom: 0.1rem; } /* green on black box- for little "examples" */
 		h5   { font: 400  1.0rem "Helvetica"; background-color:blue; color:white; } /* White on blue-- the directory, links, whatever... */
 		h6   { font: 400  1.5rem "Helvetica"; background-color:black; color:yellow; } /* Yellow on yellow- see how this pans out lol */ 
@@ -77,9 +77,9 @@
 </style>
 
 <style>
-	.folder-links { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
+	.folder-links, .folder-link, .dot-separator { font: 300  0.8rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
 
-	.folder-link { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
+	/*.folder-link { font: 300  0.9rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
 
-	.dot-separator{ font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
+	.dot-separator{ font: 300  0.9rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }*/
 </style>
