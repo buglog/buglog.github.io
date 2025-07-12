@@ -35,7 +35,7 @@
 		/* when you hover over a link, it turns purple with green bg */
 		/* a { box-shadow: inset 0 -0.28em black } */
 		a:hover {color:black; background-color:#EAFF1D;}
-		a:visited { color: purple; }
+		a:visited { background-color:#777; }
 		
 		#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
    		#p2 { font: 400 1.0rem "Helvetica"; color:blue;}
@@ -78,6 +78,24 @@
 
 <style>
 	.folder-links, .folder-link, .dot-separator { font: 300  0.8rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
+
+	.link-video { color: #000000ff }
+
+.link-writing {
+    color: #f15cffff;
+}
+
+.link-image {
+    color: #74fa8bff;
+}
+
+.link-sculpture {
+    color: #eb6e74ff;
+}
+
+.link-default {
+    color: #7e7e7eff;
+}
 
 	/*.folder-link { font: 300  0.9rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
 

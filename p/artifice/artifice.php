@@ -1,11 +1,10 @@
-
 <?php include '..\..\templates\style.php' ?>
 <?php include '..\..\templates\header.php' ?>
 
-<meta name="type" content="video">
+<meta name="type" content="sculpture">
 
 <article>
-    <h3> goo ball </h3>
+    <h3> bbat </h3>
 </article>
 
 <?php include '../../templates/table.php'; ?>
