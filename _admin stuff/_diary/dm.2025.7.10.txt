@@ -1,0 +1,10 @@
+my website:
+
+a key where you can click (or see) which text colors correspond to which media types, i.e. video = purple, photo = cyan, drawing = magenta, text = pink, code = black, sculpture = green.
+
+either you click a media type and it will highlight all the links of that type, or the links will already be that color and the key will just show you which is which.
+
+style:
+if you like, add your own css sheets in each subsite. just make sure to link back to the main site or to other subsites.
+
+if you click a link to another subsite from one subsite, it should reflect on the main page that you've been there already.
