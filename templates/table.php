@@ -37,6 +37,19 @@ foreach ($subfolders as $folderPath) {
 ?>
 
 <!-- Render the filter buttons -->
+
+
+<!-- Render the folder links -->
+<div class="folder-links">
+    <?php
+    if (!empty($links)) {
+        echo implode(' <span class="dot-separator">•</span> ', $links);
+    } else {
+        echo '<h3>No folders with .php or .html files found.</h3>';
+    }
+    ?>
+</div>
+
 <div class="filters">
     <button class="filter-btn" data-filter="video">video</button>
     <span class="dot-separator">•</span>
@@ -49,17 +62,6 @@ foreach ($subfolders as $folderPath) {
     <button class="filter-btn" data-filter="writing">other</button>
     <!--<span class="dot-separator">•</span>
     <button class="clear-btn" data-filter="clear">clear</button>-->
-</div>
-
-<!-- Render the folder links -->
-<div class="folder-links">
-    <?php
-    if (!empty($links)) {
-        echo implode(' <span class="dot-separator">•</span> ', $links);
-    } else {
-        echo '<h3>No folders with .php or .html files found.</h3>';
-    }
-    ?>
 </div>
 
 </article>
