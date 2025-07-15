@@ -38,11 +38,17 @@ foreach ($subfolders as $folderPath) {
 
 <!-- Render the filter buttons -->
 <div class="filters">
-    <button class="filter-btn" data-filter="video">Video</button>
-    <button class="filter-btn" data-filter="sculpture">Sculpture</button>
-    <button class="filter-btn" data-filter="image">Image</button>
-    <button class="filter-btn" data-filter="writing">Writing</button>
-    <button class="filter-btn" data-filter="clear">Clear</button>
+    <button class="filter-btn" data-filter="video">video</button>
+    <span class="dot-separator">•</span>
+    <button class="filter-btn" data-filter="sculpture">sculpture</button>
+    <span class="dot-separator">•</span>
+    <button class="filter-btn" data-filter="image">image</button>
+    <span class="dot-separator">•</span>
+    <button class="filter-btn" data-filter="writing">text</button>
+    <span class="dot-separator">•</span>
+    <button class="filter-btn" data-filter="writing">other</button>
+    <!--<span class="dot-separator">•</span>
+    <button class="clear-btn" data-filter="clear">clear</button>-->
 </div>
 
 <!-- Render the folder links -->
@@ -68,23 +74,18 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
 
+            // Toggle button visual state
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Highlight matching links
             links.forEach(link => {
-                // Remove all previous highlight-type classes
-                link.classList.remove(
-                    'highlight-video',
-                    'highlight-writing',
-                    'highlight-image',
-                    'highlight-sculpture'
-                );
-
-                if (filter === 'clear') return;
-
+                link.classList.remove('highlight');
                 if (link.dataset.type === filter) {
-                    link.classList.add(`highlight-${filter}`);
+                    link.classList.add('highlight');
                 }
             });
         });
     });
 });
 </script>
-
