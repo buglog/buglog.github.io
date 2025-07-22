@@ -15,7 +15,7 @@
 		body { background-color: #fff2eb; /* Replace with your desired color */ }
 		/* Larger font size for mobile devices */
 		/* FIX! vv */
-		@media only screen and (max-width:767px) { html { font-size:200%; } body {background-color:blue;} }
+		@media only screen and (max-width:767px) { html { font-size:200%; } body {background-color:#fff992;} }
 
 		bg * { color: #fff2eb; }
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
@@ -91,7 +91,9 @@
 
 /* Highlight colors per type */
 .highlight {
-    background-color: rgba(255, 255, 0, 1);
+    /* background-color: rgba(255, 255, 0, 1); */
+	background-color: rgba(255, 0, 125, 1);
+	color: white;
 }
 
 .filters {

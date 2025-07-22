@@ -3,8 +3,8 @@
 
 <article>
 <?php
-$baseDir = __DIR__ . '../../p';
-$baseUrl = '../../p';
+$baseDir = __DIR__ . '../../pages';
+$baseUrl = '../../pages';
 
 $subfolders = array_filter(glob($baseDir . '/*'), 'is_dir');
 
@@ -33,7 +33,6 @@ foreach ($subfolders as $folderPath) {
         $links[] = "<a href=\"$link\" class=\"folder-link\" data-type=\"$type\">$folderName</a>";
     }
 }
-
 ?>
 
 <!-- Render the filter buttons -->
@@ -59,7 +58,7 @@ foreach ($subfolders as $folderPath) {
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="writing">text</button>
     <span class="dot-separator">•</span>
-    <button class="filter-btn" data-filter="writing">other</button>
+    <button class="filter-btn" data-filter="other">other</button>
     <!--<span class="dot-separator">•</span>
     <button class="clear-btn" data-filter="clear">clear</button>-->
 </div>
