@@ -95,8 +95,14 @@
     font-weight: bold;
 }
 
+
+.folder-link.filtered.clicked {
+    background-color: #ffa; /* stronger highlight when both filtered and clicked */
+    border: 1px solid #cc0;
+}
+
 /* Highlight colors per type */
-.highlight {
+.filtered {
     /* background-color: rgba(255, 255, 0, 1); */
 	background-color: rgba(255, 0, 125, 1);
 	color: white;

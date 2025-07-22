@@ -74,33 +74,34 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get list of clicked links from localStorage
     let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
 
-    // Highlight previously clicked links
+    // Apply `.clicked` class to all previously clicked links
     links.forEach(link => {
         if (clickedLinks.includes(link.href)) {
             link.classList.add('clicked');
         }
     });
 
-    // Filter button behavior
+    // Handle filter buttons
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
 
-            // Toggle button visual state
+            // Toggle active button state
             buttons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            // Highlight matching links
+            // Apply `.filtered` class to matching links
             links.forEach(link => {
-                link.classList.remove('highlight');
+                link.classList.remove('filtered');
+
                 if (link.dataset.type === filter) {
-                    link.classList.add('highlight');
+                    link.classList.add('filtered');
                 }
             });
         });
     });
 
-    // Track clicked link and save to localStorage
+    // Track new clicks
     links.forEach(link => {
         link.addEventListener('click', function () {
             const href = this.href;
@@ -112,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+
+
 
 <button id="clear-clicks">Clear Click History</button>
 
