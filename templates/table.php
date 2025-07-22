@@ -35,9 +35,6 @@ foreach ($subfolders as $folderPath) {
 }
 ?>
 
-<!-- Render the filter buttons -->
-
-
 <!-- Render the folder links -->
 <div class="folder-links">
     <?php
@@ -49,7 +46,7 @@ foreach ($subfolders as $folderPath) {
     ?>
 </div>
 
-<div class="filters">
+<div>
     <button class="filter-btn" data-filter="video">video</button>
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="sculpture">sculpture</button>
@@ -60,7 +57,7 @@ foreach ($subfolders as $folderPath) {
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="other">other</button>
     <!--<span class="dot-separator">•</span>
-    <button class="clear-btn" data-filter="clear">clear</button>-->
+    <button class = "clear-btn" id="clear">clear</button>-->
 </div>
 
 </article>
@@ -71,22 +68,58 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.filter-btn');
     const links = document.querySelectorAll('.folder-link');
 
+    // Get list of clicked links from localStorage
+    let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
+
+    // Apply `.clicked` class to all previously clicked links
+    links.forEach(link => {
+        if (clickedLinks.includes(link.href)) {
+            link.classList.add('clicked');
+        }
+    });
+
+    // Handle filter buttons
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
 
-            // Toggle button visual state
+            // Toggle active button state
             buttons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            // Highlight matching links
+            // Apply `.filtered` class to matching links
             links.forEach(link => {
-                link.classList.remove('highlight');
+                link.classList.remove('filtered');
+
                 if (link.dataset.type === filter) {
-                    link.classList.add('highlight');
+                    link.classList.add('filtered');
                 }
             });
         });
     });
+
+    // Track new clicks
+    links.forEach(link => {
+        link.addEventListener('click', function () {
+            const href = this.href;
+            if (!clickedLinks.includes(href)) {
+                clickedLinks.push(href);
+                localStorage.setItem('clickedLinks', JSON.stringify(clickedLinks));
+            }
+        });
+    });
 });
 </script>
+
+<div><button class = "clear-btn" id="clear">clear</button></div>
+
+<script>
+document.getElementById('clear').addEventListener('click', () => {
+    localStorage.removeItem('clickedLinks');
+    document.querySelectorAll('.folder-link.clicked').forEach(link => {
+        link.classList.remove('clicked');
+    });
+});
+</script>
+
+
