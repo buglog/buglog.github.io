@@ -1,6 +1,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Crimson+Text:600">
+	<!--<link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Crimson+Text:600">-->
 	<link rel="stylesheet" href= "../../css/reset.css">
 	<!-- just replace with "css/debug.css" to see squares. -->
 	<link rel="stylesheet" href= "../../css/~debug.css">
@@ -8,18 +8,16 @@
 	<link rel="stylesheet" href= "../../css/article.css">
 	<link rel="stylesheet" href= "../../css/article-image.css">
 
-	<!-- Choosing the colors, fonts and sizes of the html elements we're gonna use. -->
 	<style>
-
 		html { font-size: 100%; }
-		body { background-color: #fff2eb; /* Replace with your desired color */ }
+		body { background-color: #fff2eb; }
 		/* Larger font size for mobile devices */
-		/* FIX! vv */
 		@media only screen and (max-width:767px) { html { font-size:200%; } body {background-color:#fff992;} }
 
 		bg * { color: #fff2eb; }
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
 		article {margin-top: 0.5rem;}
+
 		h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
 		h2   { font: bold 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
 		h3   { font: 300  0.9rem /*0.63rem */ "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD } /* LINKS */
@@ -30,103 +28,47 @@
 		time { font: 400  1.4rem  "Helvetica"; color:blue; margin-bottom:0.5rem;}
 		p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;}
 		time { font: bold  0.8rem "Helvetica"; margin-bottom: 1.0rem; color:#0006FF; }
-		/* { margin-bottom: 2.0rem; } */
 		img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
-		/* when you hover over a link, it turns purple with green bg */
-		/* a { box-shadow: inset 0 -0.28em black } */
 		a:hover {color:black; background-color:#EAFF1D;}
 		/*a:visited { background-color:#777; }*/
 		
 		#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
    		#p2 { font: 400 1.0rem "Helvetica"; color:blue;}
-    .blueText
-    {
-      color: #FF00FD; background-color: black;
-    }
-    
-    div.ex1 {
-		height:500px;
-		overflow:scroll;
-	}   
+    	.blueText { color: #FF00FD; background-color: black; }
+    	div.ex1 { height:500px; overflow:scroll; }   
 </style>
 
 	<!-- Making Columns -->
 <style>
-		*{
-		box-sizing: border-box;
-		}
-	/* Create three equal columns that floats next to each other */
-	.column {
-  		float: left;
-  		width: 33.33%;
-  		padding: 0px;
-  		/*height: 300px;  Should be removed. Only for demonstration */
-		}
-	.column2 {
-  		float: left;
-  		width: 50%;
-  		padding: 0px;
-  		/*height: 300px;  Should be removed. Only for demonstration */
-		}
+	*{ box-sizing: border-box; }
+	/* three equal columns */
+	.column { float: left; width: 33.33%; padding: 0px; }
+	/* two equal columns */
+	.column2 { float: left; width: 50%; padding: 0px; }
 	/* Clear floats after the columns */
-	.row:after {
-	  	content: "";
-	  	display: table;
-	  	clear: both;
-		}
+	.row:after { content: ""; display: table; clear: both; }
 </style>
 
 <style>
 	.folder-links, .dot-separator { font: 300  0.9rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
-</style>
 
-<style>
-.folder-link {
-    text-decoration: none;
-    /*color: #333;
-    /*padding: 0.3em 0.5em;
-    /*border-radius: 0.3em;*/
-    /*transition: background-color 0.3s ease;*/
-}
+	.folder-link { text-decoration: none; }
 
-.folder-link.clicked {
-	color: #b1b1b1ff;
-    /* background-color: #ffef99;  Or any style you prefer */
-    /*font-weight: bold;*/
-}
+	.folder-link.clicked { color: #b1b1b1ff; }
 
-.folder-link.filtered.clicked {
-	background-color: rgba(255, 157, 204, 1);
-	color: white;
-}
+	.folder-link.filtered.clicked { background-color: #b1b1b1ff; color: white; }
+	/* filtered items */
+	.filtered { background-color: rgba(255, 0, 125, 1); color: white; }
 
-/* Highlight colors per type */
-.filtered {
-    /* background-color: rgba(255, 255, 0, 1); */
-	background-color: rgba(255, 0, 125, 1);
-	color: white;
-}
+	button.filter-btn {
+		font-size: 0.8rem;
+    	border: 0;
+		background-color: transparent;
+    	cursor: pointer;
+	}
 
-button.filter-btn {
-	font-size: 0.8rem;
-    border: 0;
-	background-color: transparent;
-    /*background-color: #f8f8f8;*/
-    cursor: pointer;
-    /*border-radius: 5px;*/
-}
+	.filter-btn:hover { background-color: #e0e0e0; }
 
-.filter-btn:hover {
-    background-color: #e0e0e0;
-}
-
-.filter-btn.active {
-    background-color: #333;
-    color: white;
-}
-/*
-.clear-btn {
-
-}*/
+	.filter-btn.active { background-color: #333; color: white }
 </style>
 

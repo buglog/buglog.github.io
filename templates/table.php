@@ -35,9 +35,6 @@ foreach ($subfolders as $folderPath) {
 }
 ?>
 
-<!-- Render the filter buttons -->
-
-
 <!-- Render the folder links -->
 <div class="folder-links">
     <?php
@@ -113,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
-
 
 <div><button class = "clear-btn" id="clear">clear</button></div>
 
