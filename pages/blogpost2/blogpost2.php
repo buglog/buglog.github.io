@@ -1,6 +1,6 @@
 
-<?php include 'templates/style.php'; ?>
-<?php include 'templates/header.php'; ?>
+<?php include '../../templates/style.php'; ?>
+<?php include '../../templates/header.php'; ?>
 <body>
     <article>
         <section>
@@ -17,5 +17,5 @@
 </body>
     <!-- Add more sections as needed -->
 
-<?php include 'templates/table.php'; ?>
-<?php include 'templates/footer.php'; ?>
+<?php include '../../templates/table.php'; ?>
+<?php include '../../templates/footer.php'; ?>
