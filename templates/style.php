@@ -92,13 +92,12 @@
 .folder-link.clicked {
 	color: #b1b1b1ff;
     /* background-color: #ffef99;  Or any style you prefer */
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
-
 .folder-link.filtered.clicked {
-    background-color: #ffa; /* stronger highlight when both filtered and clicked */
-    border: 1px solid #cc0;
+	background-color: rgba(255, 157, 204, 1);
+	color: white;
 }
 
 /* Highlight colors per type */
@@ -106,10 +105,6 @@
     /* background-color: rgba(255, 255, 0, 1); */
 	background-color: rgba(255, 0, 125, 1);
 	color: white;
-}
-
-.filters {
-    /*margin-bottom: 1em;*/
 }
 
 button.filter-btn {

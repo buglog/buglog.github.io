@@ -49,7 +49,7 @@ foreach ($subfolders as $folderPath) {
     ?>
 </div>
 
-<div class="filters">
+<div>
     <button class="filter-btn" data-filter="video">video</button>
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="sculpture">sculpture</button>
@@ -60,7 +60,7 @@ foreach ($subfolders as $folderPath) {
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="other">other</button>
     <!--<span class="dot-separator">•</span>
-    <button class="clear-btn" data-filter="clear">clear</button>-->
+    <button class = "clear-btn" id="clear">clear</button>-->
 </div>
 
 </article>
@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<button id="clear-clicks">Clear Click History</button>
+<div><button class = "clear-btn" id="clear">clear</button></div>
 
 <script>
-document.getElementById('clear-clicks').addEventListener('click', () => {
+document.getElementById('clear').addEventListener('click', () => {
     localStorage.removeItem('clickedLinks');
     document.querySelectorAll('.folder-link.clicked').forEach(link => {
         link.classList.remove('clicked');
