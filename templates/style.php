@@ -89,6 +89,12 @@
     /*transition: background-color 0.3s ease;*/
 }
 
+.folder-link.clicked {
+	color: #b1b1b1ff;
+    /* background-color: #ffef99;  Or any style you prefer */
+    font-weight: bold;
+}
+
 /* Highlight colors per type */
 .highlight {
     /* background-color: rgba(255, 255, 0, 1); */

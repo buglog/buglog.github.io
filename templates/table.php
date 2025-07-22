@@ -71,6 +71,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.filter-btn');
     const links = document.querySelectorAll('.folder-link');
 
+    // Get list of clicked links from localStorage
+    let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
+
+    // Highlight previously clicked links
+    links.forEach(link => {
+        if (clickedLinks.includes(link.href)) {
+            link.classList.add('clicked');
+        }
+    });
+
+    // Filter button behavior
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
@@ -88,5 +99,29 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Track clicked link and save to localStorage
+    links.forEach(link => {
+        link.addEventListener('click', function () {
+            const href = this.href;
+            if (!clickedLinks.includes(href)) {
+                clickedLinks.push(href);
+                localStorage.setItem('clickedLinks', JSON.stringify(clickedLinks));
+            }
+        });
+    });
 });
 </script>
+
+<button id="clear-clicks">Clear Click History</button>
+
+<script>
+document.getElementById('clear-clicks').addEventListener('click', () => {
+    localStorage.removeItem('clickedLinks');
+    document.querySelectorAll('.folder-link.clicked').forEach(link => {
+        link.classList.remove('clicked');
+    });
+});
+</script>
+
+
