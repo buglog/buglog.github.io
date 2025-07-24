@@ -1,10 +1,7 @@
-
-
-
 <article>
 <?php
-$baseDir = __DIR__ . '../../pages';
-$baseUrl = '../../pages';
+$baseDir = __DIR__ . '../../sites';
+$baseUrl = '../../sites';
 
 $subfolders = array_filter(glob($baseDir . '/*'), 'is_dir');
 

@@ -1,6 +1,5 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!--<link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Crimson+Text:600">-->
 	<link rel="stylesheet" href= "../../css/reset.css">
 	<!-- just replace with "css/debug.css" to see squares. -->
 	<link rel="stylesheet" href= "../../css/~debug.css">
@@ -17,6 +16,8 @@
 		bg * { color: #fff2eb; }
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
 		article {margin-top: 0.5rem;}
+
+		/*article h1, article h2, article h3, article h4, article h5, article h6 { grid-column: auto; display: inline; }*/
 
 		h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
 		h2   { font: bold 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
