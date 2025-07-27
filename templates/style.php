@@ -1,11 +1,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href= "../../css/reset.css">
-	<!-- just replace with "css/debug.css" to see squares. -->
+	<!--just replace with "css/debug.css" to see squares.-->
 	<link rel="stylesheet" href= "../../css/~debug.css">
-	<!-- styling the grid with responsive page design. -->
+	<!-- styling the grid with responsive page design.--> 
 	<link rel="stylesheet" href= "../../css/article.css">
-	<link rel="stylesheet" href= "../../css/article-image.css">
+	<link rel="stylesheet" href= "../../css/article-image.css"> 
 
 	<style>
 		html { font-size: 100%; }

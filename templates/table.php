@@ -1,4 +1,6 @@
 <article>
+    <!-- Content area to inject page HTML -->
+  <div id="page-content"></div>
   <div class="folder-links" id="folder-links">
     <!-- Links will be injected here -->
   </div>
@@ -10,17 +12,18 @@
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="image">image</button>
     <span class="dot-separator">•</span>
-    <button class="filter-btn" data-filter="writing">text</button>
+    <button class="filter-btn" data-filter="text">text</button>
     <span class="dot-separator">•</span>
     <button class="filter-btn" data-filter="other">other</button>
   </div>
 
-  <div><button class="clear-btn" id="clear">clear</button></div>
+  <div><button class="clear-btn" id="clear">clear</button></div>  
 </article>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const folderLinksContainer = document.getElementById('folder-links');
+  const contentContainer = document.getElementById('page-content');
   const buttons = document.querySelectorAll('.filter-btn');
   let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
 
@@ -35,26 +38,38 @@ document.addEventListener('DOMContentLoaded', function () {
       const links = data.map(item => {
         const url = `../../sites/${item.name}/${item.file}`;
         const type = item.type || 'default';
+        const isClicked = clickedLinks.includes(url);
 
-        return `<a href="${url}" class="folder-link${clickedLinks.includes(location.origin + '/' + url) ? ' clicked' : ''}" data-type="${type}">${item.name}</a>`;
+        return `<span class="folder-link${isClicked ? ' clicked' : ''}" data-url="${url}" data-type="${type}">${item.name}</span>`;
       });
 
       folderLinksContainer.innerHTML = links.join(' <span class="dot-separator">•</span> ');
-
       addClickHandlers();
     });
 
   function addClickHandlers() {
     const links = document.querySelectorAll('.folder-link');
 
-    // Track clicks
+    // Track clicks and load content
     links.forEach(link => {
       link.addEventListener('click', function () {
-        const href = this.href;
-        if (!clickedLinks.includes(href)) {
-          clickedLinks.push(href);
+        const url = this.dataset.url;
+
+        if (!clickedLinks.includes(url)) {
+          clickedLinks.push(url);
           localStorage.setItem('clickedLinks', JSON.stringify(clickedLinks));
         }
+
+        this.classList.add('clicked');
+
+        fetch(url)
+          .then(response => response.text())
+          .then(html => {
+            contentContainer.innerHTML = html;
+          })
+          .catch(err => {
+            contentContainer.innerHTML = `<p>Error loading content from ${url}</p>`;
+          });
       });
     });
 
@@ -81,6 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.folder-link.clicked').forEach(link => {
       link.classList.remove('clicked');
     });
+    contentContainer.innerHTML = '';
   });
 });
+
 </script>
