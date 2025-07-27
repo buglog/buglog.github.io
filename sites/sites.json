@@ -5,13 +5,8 @@
     "type": "text"
   },
   {
-    "name": "artifice",
-    "file": "artifice.php",
-    "type": "sculpture"
-  },
-  {
-    "name": "base",
-    "file": "base.php",
-    "type": "image"
+    "name": "testtest",
+    "file": "test.php",
+    "type": "other"
   }
 ]
