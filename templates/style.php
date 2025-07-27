@@ -17,8 +17,6 @@
 		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
 		article {margin-top: 0.5rem;}
 
-		/*article h1, article h2, article h3, article h4, article h5, article h6 { grid-column: auto; display: inline; }*/
-
 		h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
 		h2   { font: bold 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
 		h3   { font: 300  0.9rem /*0.63rem */ "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD } /* LINKS */
@@ -72,4 +70,5 @@
 
 	.filter-btn.active { background-color: #333; color: white }
 </style>
+
 
