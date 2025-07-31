@@ -16,9 +16,11 @@
         <!-- Add your navigation bar here -->
     </header>
 
+
+
 <article>
     <!-- Content area to inject page HTML -->
-  <div id="page-content"></div>
+  <div id="page-content"></div> 
     <!-- Links will be injected here -->
   <div class="folder-links" id="folder-links">
   </div>
@@ -33,10 +35,15 @@
     <button class="filter-btn" data-filter="text">text</button>
     <span class="dot-separator"> / </span>
     <button class="filter-btn" data-filter="other">other</button>
+    <span class="dot-separator"> / </span>
+    <button class="clear-btn" id="clear">clear</button>
   </div>
 
-  <div><button class="clear-btn" id="clear">clear</button></div>  
 </article>
+
+<div class = "clicky">
+<a class = "clicky" href="https://ddbentl.com/"><img src="https://ddbentl.com/img/bentlbutton.gif" alt="ddbentl" /> </br></a>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -56,8 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const links = data.map(item => {
         const folder = item.name;
-        const file = item.file;
-        const url = `sites/${folder}/${file}`;
+        /*const file = item.file;
+        const url = `sites/${folder}/${file}`;*/
+        const date = item.date;
+        const url = `sites/${folder}/site.html`;
         const type = item.type || 'default';
         const isClicked = clickedLinks.includes(url);
 
@@ -146,11 +155,20 @@ document.addEventListener('DOMContentLoaded', function () {
   // Clear clicked links
   document.getElementById('clear').addEventListener('click', () => {
     localStorage.removeItem('clickedLinks');
-    document.querySelectorAll('.folder-link.clicked').forEach(link => {
-      link.classList.remove('clicked');
+
+    //remove filtered links
+    document.querySelectorAll('.folder-link').forEach(link => {
+          link.classList.remove('filtered');
     });
-    contentContainer.innerHTML = '';
-    window.location.hash = ''; // Clear hash from URL too
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // remove clicked links
+    document.querySelectorAll('.folder-link.clicked').forEach(link => {
+      //link.classList.remove('clicked');
+    });
+
+    //contentContainer.innerHTML = '';
+    //window.location.hash = ''; // Clear hash from URL too
   });
   // Handle Back/Forward navigation by re-loading content from the hash
 window.addEventListener('hashchange', () => {
@@ -162,11 +180,12 @@ window.addEventListener('hashchange', () => {
 
 </script>
 
+<!--
 <footer>
     <article>
     <p>&copy; dollmath.online by inga waste contaminant.</p>
     </article>
 </footer>
-
+-->
 </body>
 </html>

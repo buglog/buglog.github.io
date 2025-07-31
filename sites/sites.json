@@ -1,12 +1,22 @@
 [
   {
     "name": "about",
-    "file": "about.php",
+    "type": "text"
+  },
+  {
+    "name": "blogpost2",
     "type": "text"
   },
   {
     "name": "testtest",
-    "file": "test.php",
     "type": "other"
+  },
+  {
+    "name": "pianotoon",
+    "type": "other"
+  },
+  {
+    "name": "2012",
+    "type": "video"
   }
 ]

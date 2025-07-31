@@ -1,6 +1,6 @@
 	
 	
-	html { font-size: 100%; }
+	html { font-size: 140%; }
 	/*CURSOR*/
 	html { cursor: url('path/to/your.ico'), default; }
 	body { background-color: #fff2eb; }
@@ -17,16 +17,18 @@
 	h6   { font: 400  1.5rem "Helvetica"; background-color:black; color:yellow; } /* Yellow on yellow- see how this pans out lol */ 
 	
 	time { font: 400  1.4rem  "Helvetica"; color:blue; margin-bottom:0.5rem;}
-	p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;}
+	p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;  text-align: justify; text-justify: inter-word;}
 	time { font: bold  0.8rem "Helvetica"; margin-bottom: 1.0rem; color:#0006FF; }
 	img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
-	a:hover {color:black; background-color:#EAFF1D;}
+	a:hover { display: inline-block; color:black; background-color:#EAFF1D;}
 	/*a:visited { background-color:#777; }*/
 	
 	#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
 	#p2 { font: 400 1.0rem "Helvetica"; color:blue;}
 	.blueText { color: #FF00FD; background-color: black; }
 	div.ex1 { height:500px; overflow:scroll; }   
+
+	.clicky { padding-left: 5%; display: inline-block; margin:0;}
 	
 	*{ box-sizing: border-box; }
 	/* three equal columns */
@@ -52,6 +54,17 @@
 		background-color: transparent;
     	cursor: pointer;
 	}
+
+	.clear-btn {
+		/*color:hsl(189, 100%, 51%);*/
+		color: black;
+		font-size: 0.8rem;
+    	border: 2px;
+		background-color: transparent;
+    	cursor: pointer;
+	}
+
+	.clear-btn:hover { background-color: #bdbdbd; }
 
 	.filter-btn:hover { background-color: #e0e0e0; }
 
