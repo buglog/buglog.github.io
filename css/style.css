@@ -41,6 +41,7 @@
 	.folder-links, .dot-separator { font: 300  0.7rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD; }
 
 	.link { text-decoration: none; cursor: pointer; }
+	.links { color:magenta; }
 
 	.folder-link.clicked { color: #b1b1b1ff; }
 	
