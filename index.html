@@ -10,182 +10,60 @@
 <link rel="stylesheet" href= "css/article-image.css"> 
 <link rel="stylesheet" href= "css/style.css">
 
+<head>
+  <script src="../../jquery-3.7.1.min.js"></script> 
+    <script> 
+    $(function(){
+      $("#diary-links").load("../../includes/diary-links.html"); 
+    });
+    </script> 
+</head>
+
 <body>
     <header id="header">
         <h1><a href="/"><span style="color: magenta;">DOLL</span><span style="color: limegreen;">MATH</span></a></h1>
         <!-- Add your navigation bar here -->
+         <p class = "links">
+        <a href = "https://youtube.com/@ingawaste">youtube</a> / 
+        <a href = "https://vimeo.com/ingoraschka">vimeo</a> / 
+        <a href = "https://instagram.com/speciescide">instagram</a> / 
+        <a href = "https://are.na/doll-math/channels">are.na</a> / 
+        <a href = "https://ingoraschka.tumblr.com">tumblr</a> / 
+        <a href = "https://twitch.tv/dollmath">twitch</a> / 
+        <a href = "https://github.com/buglog">github</a>
+      </p>
     </header>
 
 
 
-<article>
-    <!-- Content area to inject page HTML -->
-  <div id="page-content"></div> 
-    <!-- Links will be injected here -->
-  <div class="folder-links" id="folder-links">
-  </div>
+  <article class="folder-links" id="folder-links">
+    <!--<h2>this site is under construction</h2>-->
+      <p>key:   
+        <span class ="video">video</span> / 
+        <span class ="audio">audio</span> / 
+        <span class ="text">text</span> / 
+        <span class ="other">other</span>
+      </p>
+    <a class = "video" href = "https://www.itsnicethat.com/articles/ingo-raschka-2012-animation-201118">2012, an apocalypse anxiety "love" story</a><br>
+    <a class = "audio" href = "https://wfmu.org/playlists/shows/155006">WFMU's Radio Row: one hour of music by trans musicians.</a><br>
+    <a class = "video" href = "https://www.youtube.com/watch?v=NdAelXK0Mm8">Aesop's "The Frogs Desiring a King"</a><br>
+    <a class = "other" href = "https://www.youtube.com/watch?v=NdAelXK0Mm8">Type the number keys to play this interactive drumkit.</a>
+    <a class = "video" href = "https://tv.booooooom.com/2016/04/27/video-69-by-ingo-raschka/">VIDEO 69: Isolation becomes objectophilia.</a>
+    
+    </p>
+  </article>
 
-  <div>
-    <button class="filter-btn" data-filter="video">video</button>
-    <span class="dot-separator"> / </span>
-    <button class="filter-btn" data-filter="sculpture">sculpture</button>
-    <span class="dot-separator"> / </span>
-    <button class="filter-btn" data-filter="image">image</button>
-    <span class="dot-separator"> / </span>
-    <button class="filter-btn" data-filter="text">text</button>
-    <span class="dot-separator"> / </span>
-    <button class="filter-btn" data-filter="other">other</button>
-    <span class="dot-separator"> / </span>
-    <button class="clear-btn" id="clear">clear</button>
-  </div>
+    <div id="diary-links"></div>
 
+    
+  
+<article class = "clicky">
+  <br>
+<a class = "clicky" href="https://ddbentl.com/"><img src="https://ddbentl.com/img/bentlbutton.gif" alt="ddbentl" /> </br></a>
 </article>
 
-<div class = "clicky">
-<a class = "clicky" href="https://ddbentl.com/"><img src="https://ddbentl.com/img/bentlbutton.gif" alt="ddbentl" /> </br></a>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const folderLinksContainer = document.getElementById('folder-links');
-  const contentContainer = document.getElementById('page-content');
-  const buttons = document.querySelectorAll('.filter-btn');
-  let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
-  let dataLookup = {}; // 👈 Store folder info for reverse lookup later
-
-  fetch('sites/sites.json')
-    .then(response => response.json())
-    .then(data => {
-      if (!Array.isArray(data) || data.length === 0) {
-        folderLinksContainer.innerHTML = '<h3>No folder entries found.</h3>';
-        return;
-      }
-
-      const links = data.map(item => {
-        const folder = item.name;
-        /*const file = item.file;
-        const url = `sites/${folder}/${file}`;*/
-        const date = item.date;
-        const url = `sites/${folder}/site.html`;
-        const type = item.type || 'default';
-        const isClicked = clickedLinks.includes(url);
-
-        // Save for hash resolution later
-        dataLookup[folder] = { url, type };
-
-        return `<span class="folder-link${isClicked ? ' clicked' : ''}" data-url="${url}" data-folder="${folder}" data-type="${type}">${folder}</span>`;
-      });
-
-      folderLinksContainer.innerHTML = links.join(' <span class="dot-separator"> / </span> ');
-      addClickHandlers();
-      loadInitialFromHash(); // ✅ Load if hash exists
-    });
-
-  function addClickHandlers() {
-    const links = document.querySelectorAll('.folder-link');
-
-    links.forEach(link => {
-      link.addEventListener('click', function () {
-        const url = this.dataset.url;
-        const folder = this.dataset.folder;
-
-        if (!clickedLinks.includes(url)) {
-          clickedLinks.push(url);
-          localStorage.setItem('clickedLinks', JSON.stringify(clickedLinks));
-        }
-
-        this.classList.add('clicked');
-
-        // ✅ Set URL hash to folder name
-        window.location.hash = encodeURIComponent(folder);
-
-        fetchAndDisplay(url);
-      });
-    });
-
-    // Filter buttons
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        document.querySelectorAll('.folder-link').forEach(link => {
-          link.classList.remove('filtered');
-          if (link.dataset.type === filter) {
-            link.classList.add('filtered');
-          }
-        });
-      });
-    });
-  }
-
-  function fetchAndDisplay(url) {
-    fetch(url)
-      .then(response => response.text())
-      .then(html => {
-        contentContainer.innerHTML = html;
-      })
-      .catch(err => {
-        contentContainer.innerHTML = `<p>Error loading content from ${url}</p>`;
-      });
-  }
-
-  // ✅ Load page content based on hash (e.g., #myfolder)
-  function loadInitialFromHash() {
-    const hash = window.location.hash;
-    if (hash.length > 1) {
-      const folder = decodeURIComponent(hash.slice(1));
-
-      if (dataLookup[folder]) {
-        const { url } = dataLookup[folder];
-
-        fetchAndDisplay(url);
-
-        // Highlight the matching link
-        document.querySelectorAll(`.folder-link[data-folder="${folder}"]`).forEach(link => {
-          link.classList.add('clicked');
-        });
-      } else {
-        contentContainer.innerHTML = `<p>Page "${folder}" not found.</p>`;
-      }
-    }
-  }
-
-  // Clear clicked links
-  document.getElementById('clear').addEventListener('click', () => {
-    localStorage.removeItem('clickedLinks');
-
-    //remove filtered links
-    document.querySelectorAll('.folder-link').forEach(link => {
-          link.classList.remove('filtered');
-    });
-
-    buttons.forEach(btn => btn.classList.remove('active'));
-    // remove clicked links
-    document.querySelectorAll('.folder-link.clicked').forEach(link => {
-      //link.classList.remove('clicked');
-    });
-
-    //contentContainer.innerHTML = '';
-    //window.location.hash = ''; // Clear hash from URL too
-  });
-  // Handle Back/Forward navigation by re-loading content from the hash
-window.addEventListener('hashchange', () => {
-  loadInitialFromHash();
-});
-
-});
-
-
-</script>
-
-<!--
-<footer>
-    <article>
-    <p>&copy; dollmath.online by inga waste contaminant.</p>
-    </article>
+<footer id = "header">
+    <p>&copy; buglog.github.io by inga waste contaminant.</p>
 </footer>
--->
 </body>
 </html>
