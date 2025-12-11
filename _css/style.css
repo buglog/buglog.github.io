@@ -1,6 +1,6 @@
 	
 	
-	html { font-size: 100%; }
+	html { font-size: 160%; }
 	/*CURSOR*/
 	html { cursor: url('path/to/your.ico'), default; }
 	body { background-color: #fff2eb; }
@@ -17,16 +17,18 @@
 	h6   { font: 400  1.5rem "Helvetica"; background-color:black; color:yellow; } /* Yellow on yellow- see how this pans out lol */ 
 	
 	time { font: 400  1.4rem  "Helvetica"; color:blue; margin-bottom:0.5rem;}
-	p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;}
+	p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;  text-align: justify; text-justify: inter-word;}
 	time { font: bold  0.8rem "Helvetica"; margin-bottom: 1.0rem; color:#0006FF; }
 	img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
-	a:hover {color:black; background-color:#EAFF1D;}
+	a:hover { display: inline-block; color:black; background-color:#EAFF1D;}
 	/*a:visited { background-color:#777; }*/
 	
 	#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
 	#p2 { font: 400 1.0rem "Helvetica"; color:blue;}
 	.blueText { color: #FF00FD; background-color: black; }
 	div.ex1 { height:500px; overflow:scroll; }   
+
+	.clicky { padding-left: 5%; display: inline-block; margin:0;}
 	
 	*{ box-sizing: border-box; }
 	/* three equal columns */
@@ -36,25 +38,18 @@
 	/* Clear floats after the columns */
 	.row:after { content: ""; display: table; clear: both; }
 
-	.folder-links, .dot-separator { font: 300  0.9rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD }
+	.folder-links, .dot-separator { font: 300  0.7rem  "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD; }
 
-	.folder-link { text-decoration: none; cursor: pointer; }
+	.link { text-decoration: none; cursor: pointer; }
+	.links { color:magenta; }
 
 	.folder-link.clicked { color: #b1b1b1ff; }
-
-	.folder-link.filtered.clicked { background-color: #b1b1b1ff; color: white; }
-	/* filtered items */
-	.filtered { background-color: rgba(255, 0, 125, 1); color: white; }
-
-	button.filter-btn {
-		font-size: 0.8rem;
-    	border: 0;
-		background-color: transparent;
-    	cursor: pointer;
-	}
-
-	.filter-btn:hover { background-color: #e0e0e0; }
-
-	.filter-btn.active { background-color: #333; color: white }
-
+	
+	/*key*/
+	.video { color:rgb(91, 185, 185); }
+	.text { color:rgb(41, 173, 100); }
+	.text { color:rgb(247, 83, 178); }
+	.audio { color:rgb(240, 7, 7); }
+	.object { color:rgb(85, 85, 85); }
+	.other { color:rgb(95, 223, 45); }
 
