@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href= "_css/reset.css">
-<!--just replace with "css/debug.css" to see squares.-->
-<link rel="stylesheet" href= "_css/~debug.css">
-<!-- styling the grid with responsive page design.--> 
-<link rel="stylesheet" href= "_css/article.css">
-<link rel="stylesheet" href= "_css/article-image.css"> 
-<link rel="stylesheet" href= "_css/style.css">
 
 <head>
-  <script src="../../jquery-3.7.1.min.js"></script> 
-    <script> 
-    $(function(){
-      //$("#diary-links").load("../../_includes/diary-links.html"); 
-      $("#top").load("../../_includes/top.html");
-      $("#socials").load("../../_includes/socials.html");
-      $("#pages").load("../../_includes/page-links.html");
-      $("#blog").load("../../_includes/blog-links.html");
-    });
-    </script> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href= "_css/reset.css">
+		<!--just replace with "css/debug.css" to see squares.-->
+		<link rel="stylesheet" href= "_css/~debug.css">
+		<!-- styling the grid with responsive page design.--> 
+		<link rel="stylesheet" href= "_css/article.css">
+		<link rel="stylesheet" href= "_css/article-image.css"> 
+		<link rel="stylesheet" href= "_css/style.css">    
+		<script src="../../jquery-3.7.1.min.js"></script> 
+		<script> 
+			$(function(){
+				//$("#diary-links").load("../../_includes/diary-links.html"); 
+				$("#top").load("../../_includes/top.html");
+				$("#socials").load("../../_includes/socials.html");
+				$("#pages").load("../../_includes/page-links.html");
+				$("#blog").load("../../_includes/blog-links.html");
+				$("#buttons").load("../../_includes/buttons.html");
+				$("#bottom").load("../../_includes/bottom.html");
+			});
+		</script> 
 </head>
 
 <body>
-  <header id="header">
-    <div id="top"></div>
-    <div id="socials"></div>
-  </header>
+<header id="header">
+		<div id="top"></div>
+		<div id="socials"></div>
+</header>
+<!--<article class="folder-links" id="folder-links">
+			<h2>this site is under construction</h2>
+			<p>key:   
+				<span class ="video">video</span> / 
+				<span class ="audio">audio</span> / 
+				<span class ="text">text</span> / 
+				<span class ="other">other</span>
+			</p>
+			<a class = "video" href = "https://www.itsnicethat.com/articles/ingo-raschka-2012-animation-201118">2012, an apocalypse anxiety "love" story</a><br>
+			<a class = "audio" href = "https://wfmu.org/playlists/shows/155006">WFMU's Radio Row: one hour of music by trans musicians.</a><br>
+			<a class = "video" href = "https://www.youtube.com/watch?v=NdAelXK0Mm8">Aesop's "The Frogs Desiring a King"</a><br>
+			<a class = "other" href = "https://www.youtube.com/watch?v=NdAelXK0Mm8">Type the number keys to play this interactive drumkit.</a>
+			<a class = "video" href = "https://tv.booooooom.com/2016/04/27/video-69-by-ingo-raschka/">VIDEO 69: Isolation becomes objectophilia.</a>
+		
+		</p>
+	</article>-->
 
-  <article class="folder-links" id="folder-links">
-    <!--<h2>this site is under construction</h2>
-      <p>key:   
-        <span class ="video">video</span> / 
-        <span class ="audio">audio</span> / 
-        <span class ="text">text</span> / 
-        <span class ="other">other</span>
-      </p> -->
-      <a class = "video" href = "https://www.itsnicethat.com/articles/ingo-raschka-2012-animation-201118">2012, an apocalypse anxiety "love" story</a><br>
-      <a class = "audio" href = "https://wfmu.org/playlists/shows/155006">WFMU's Radio Row: one hour of music by trans musicians.</a><br>
-      <a class = "video" href = "https://www.youtube.com/watch?v=NdAelXK0Mm8">Aesop's "The Frogs Desiring a King"</a><br>
-      <a class = "other" href = "https://www.youtube.com/watch?v=NdAelXK0Mm8">Type the number keys to play this interactive drumkit.</a>
-      <a class = "video" href = "https://tv.booooooom.com/2016/04/27/video-69-by-ingo-raschka/">VIDEO 69: Isolation becomes objectophilia.</a>
-    
-    </p>
-  </article>
-
-
-  <div id = "pages"></div>
-
-  <div id = "blog"></div>
-
-  <div id="diary-links"></div>
-
-    
-  
-<article class = "clicky">
-  <br>
-<a class = "clicky" href="https://ddbentl.com/"><img src="https://ddbentl.com/img/bentlbutton.gif" alt="ddbentl" /> </br></a>
-</article>
-
-<footer id = "header">
-    <p>&copy; buglog.github.io by inga waste contaminant.</p>
-</footer>
+		<div id = "pages"></div>
+		<!--<div id = "blog"></div>-->
+	<!--<div id = "diary-links"></div>-->
+		<div id = "buttons"></div>
 </body>
+
+<footer>
+		<div id = "bottom"></div>
+</footer>
+
 </html>
