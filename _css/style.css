@@ -10,11 +10,7 @@
 	h2,p:not(:last-child) { margin-bottom: 0.8rem; }
 	article {margin-top: 0.5rem;}
 	h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
-	h2   { font: bold 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
-	h3   { font: 300  0.9rem /*0.63rem */ "Helvetica"; margin-bottom:0rem; line-height:1.1; color:#FF00FD } /* LINKS */
-	h4   { font: 400  1.1rem "Helvetica"; background-color:dimgrey; color: springgreen; margin-bottom: 0.1rem; } /* green on black box- for little "examples" */
-	h5   { font: 400  1.0rem "Helvetica"; background-color:blue; color:white; } /* White on blue-- the directory, links, whatever... */
-	h6   { font: 400  1.5rem "Helvetica"; background-color:black; color:yellow; } /* Yellow on yellow- see how this pans out lol */ 
+	h2   { font: 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
 	
 	time { font: 400  1.4rem  "Helvetica"; color:blue; margin-bottom:0.5rem;}
 	p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;  text-align: justify; text-justify: inter-word;}
@@ -22,10 +18,7 @@
 	img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
 	a:hover { display: inline-block; color:black; background-color:#EAFF1D;}
 	/*a:visited { background-color:#777; }*/
-	
-	#p1 { font: 400 0.6rem "Helvetica"; line-height:1.1;}
-	#p2 { font: 400 1.0rem "Helvetica"; color:blue;}
-	.blueText { color: #FF00FD; background-color: black; }
+
 	div.ex1 { height:500px; overflow:scroll; }   
 
 	.clicky { padding-left: 5%; display: inline-block; margin:0;}
@@ -47,8 +40,8 @@
 	
 	/*key*/
 	.video { color:rgb(91, 185, 185); }
-	.text { color:rgb(41, 173, 100); }
-	.text { color:rgb(247, 83, 178); }
+	#teal { color:rgb(41, 173, 100); }
+	#pink { color:rgb(247, 83, 178); }
 	.audio { color:rgb(240, 7, 7); }
 	.object { color:rgb(85, 85, 85); }
 	.other { color:rgb(95, 223, 45); }
