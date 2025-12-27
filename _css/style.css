@@ -7,10 +7,10 @@
 	/* Larger font size for mobile devices */
 	@media only screen and (max-width:767px) { html { font-size:200%; } body {background-color:#fff992;} }
 	bg * { color: #fff2eb; }
-	h2,p:not(:last-child) { margin-bottom: 0.8rem; }
-	article {margin-top: 0.5rem;}
+	
 	h1   { font: bold 0.9rem "Helvetica"; } 	/*DOLL•MATH*/
-	h2   { font: 0.9rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
+	h2   { font: 0.7rem "Helvetica"; margin-bottom: 0.0rem; } /* black, bold */
+	h2 { margin-top: 0.0rem; margin-bottom: 0.0rem; }
 	
 	time { font: 400  1.4rem  "Helvetica"; color:blue; margin-bottom:0.5rem;}
 	p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0rem; line-height:1.1;  text-align: justify; text-justify: inter-word;}
@@ -42,7 +42,13 @@
 	.video { color:rgb(91, 185, 185); }
 	#teal { color:rgb(41, 173, 100); }
 	#pink { color:rgb(247, 83, 178); }
+	#work-headers { color:rgb(99, 99, 99); margin-top:0.5rem }
 	.audio { color:rgb(240, 7, 7); }
 	.object { color:rgb(85, 85, 85); }
 	.other { color:rgb(95, 223, 45); }
+
+
+
+
+
 
