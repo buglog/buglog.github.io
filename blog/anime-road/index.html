@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href= "../../_css/~debug.css">
+		<link rel="stylesheet" href= "../../_css/style.css">    
+		<script src="../../jquery-3.7.1.min.js"></script> 
+		<script> 
+			$(function(){
+				//$("#diary-links").load("../../_includes/diary-links.html"); 
+				$("#top").load("../../_includes/top.html");
+				$("#socials").load("../../_includes/socials.html");
+				$("#pages").load("../../_includes/page-links.html");
+				$("#blog").load("../../_includes/blog-links.html");
+				$("#buttons").load("../../_includes/buttons.html");
+				$("#bottom").load("../../_includes/bottom.html");
+			});
+		</script> 
+</head>
+
+<body>
+	<header id="header">
+		<div id="top"></div>
+		<div id="socials"></div>
+	</header>
+
+    <article id="animeroad">
+		<h3>Making an anime road</h3>
+		<time datetime="05-18-2019">May 6, 2019</time>
+		<p align="justify">Before it became cheap and easy to use computers to simulate three-dimensional backgrounds, cel animators had two options when it came to representing 3D space- they either had to animate it by hand, or use techniques to "cheat" three dimensions - on paper - to save themselves hours of drawing. In 1936, Fleischer Studios invented a solution called a Rotograph which suspended transparent cels in front of a physical handmade set, making the flat characters seem to be living in a three dimensional world.</p>
+		<div><img class="size-2" src="http://photos1.blogger.com/x/blogger/5786/2362/1600/705082/setback-01.jpg"></div>
+		<p id="p1">Max Fleischer's <em>Rotograph</em></p>
+		<p align="justify">However this was more of a spectacle than an actual cheat, since the cartoon Fleischer produced with it, "Popeye meets Sinbad the Sailor," mostly consisted of the characters walking left and right across the screen - a convention followed by most of the cartoons of the time. In other words it had the dimensionality, but it didn't <em>use</em> it.</p>
+		<div><img class="size-1" src="../../_imgs/blog/anime road/sinbad.gif"></div>
+		<p id="p1">"<a href="https://www.youtube.com/watch?v=QIwUpvf2jXY">Popeye the Sailor meets Sinbad the Sailor</a>," 1936</p>
+		<p>This video-game-style flatness is the way most cartoons were done for decades after this, being especially pervasive in the heyday of television cel animation. For television, flat, profile layouts were especially useful because they allowed studios to re-use assets like walk cycles and animation sequences. These studios would often reshoot the same animation on a different background. Since reusing animation was a practice employed by <a href="https://www.intanibase.com/gac/looneytunes/reused.aspx">every major television animation studio</a> at the time, this flatness was very prevalent in background design for animation for decades, and continues today. But some studios were developing clever ways of using animation "cels" - the flat sheets of acetate on which colorists would paint the finished frames of animation - to simulate three dimensions on the cheap.</p>
+		<p align="justify">A big problem facing animators who wished to depict three-dimensional-ish scenes (like moving cameras, characters coming towards or away from the screen, etc) was that it was difficult to scale a still image. With digital images, we use algorithms written to interpolate their pixel values into a larger or smaller array- allowing you to size or stretch an image any way you want -- <a href="https://www.youtube.com/watch?v=AqscP7rc8_M">like this</a>. </p>
+		<p align="justify">In animation software, it's very easy to, for example, take a walking loop and scale it up so it seems like the character is walking towards you. But before computers, this was much, much harder. Most of the time, the most convenient way to scale up an image was just to hand-draw each frame getting larger. Zooming in on the whole image is easy- just zoom the camera closer to the table you're shooting on. But zooming only one layer, without affecting the others, was hard.</p>
+		<p align="justify">The only other option (other than inventing a colossal and prohibitively expensive "<a href="https://www.youtube.com/watch?v=kN-eCBAOw60">multiplane camera</a>") was to use a (also massive) tool called an <a href="https://www.tested.com/art/movies/557416-how-optical-printers-were-used-create-special-effects/">Optical Printer</a>, a device which allowed you to composite multiple images or strips of film into one. The optical printer works through a <a href="https://www.youtube.com/watch?v=qwMLOjqPmbQ">complicated process</a> in which a mask called a "traveling <a href="https://en.wikipedia.org/wiki/Matte_(filmmaking)">matte</a>" is made to protect part of each frame of the film from being exposed. The mask has to fit the shape of whatever is being added to the image, so sometimes it can take a long time to make. Once the first image is shot onto the film, a reverse mask is made and the rest of the film is exposed. And so on and for as many layers as you have the patience for. By making a mask around a cel and zooming the camera in on it, then going back and reshooting the background but with the first cel masked off, animators would be able scale an image without the background coming with it.</p>
+		<p align="justify">If <a href="https://en.wikipedia.org/wiki/Matte_(filmmaking)">that</a> sounded complicated to you, it was probably also preferable for the animators (or in this case optical printer operators) to avoid using this process if they could. The most convenient way to do effects was <a href="https://en.wikipedia.org/wiki/In-camera_effect">in-camera</a>, i.e, using cels. For this reason, animation studio workers developed ways to make the viewer <em>feel</em> as if she is watching a camera movement, or a character moving along the Z-axis, without having to do excess drawings.</p>
+		<p align="justify"> That's a lot of history, now here is what all this has to do with Anime roads:</p>
+		<p align="justify">Some animation studios had figured out a sneaky way to get characters and objects to appear to come towards the camera -- without using any animation at all. </p>
+		<p align="justify">This technique came straight from photography and the real-life physics of light, lenses and refraction.</p>
+		
+		<div><img class="size-2"src="../../_imgs/blog/anime road/anno_trainshot_02.gif"></div>
+		<p id="p1" align="justify">"The End of Evangelion," 1997.</p>
+		
+		<p>In photography, depending on what kind of lens you put on your camera, you will get a very different picture. A 55mm lens is called a "normal" lens because it's as close as lenses get to what our naked eyes see. A shorter lens, and the picture starts to become fisheyed. A long lens, or telephoto lens, seems to <a href="https://photo.stackexchange.com/questions/18185/what-does-it-really-mean-that-telephoto-lenses-flatten-scenes">flatten</a> the image. </p>
+		<!--<img class="size-1" src="https://78.media.tumblr.com/tumblr_m8ki7mTRfy1qjymoao1_500.gif">-->
+		<div><img class="size-2" src="../../_imgs/blog/anime road/frodo.gif"></div>
+		<p id="p1">This effect, known misleadingly as 'lens compression' is also what allowed Hitchcock to do <a href="https://www.premiumbeat.com/../../_imgs/blog/hitchcocks-dolly-zoom-filmmaking-technique/">this</a>.</p>
+		<!--<img class="size-1" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Camera_focal_length_distance.gif">-->
+		<p align="justify">Actually, any type of camera can give you that flattened image. <a href="https://fstoppers.com/originals/lens-compression-doesnt-exist-147615">The affecting factor is distance</a>. If you take a picture of something far away and crop a small portion of the image, that portion will look flat, just like it was shot with a telephoto lens. What a telephoto lens gives you is essentially a high quality version of the same thing- a zoomed in photo. Here's a video I took with my phone:</p>
+		<div><img class="size-2" src="../../_imgs/blog/anime road/magicroadSmall.gif"></div>
+		<!--<img class="size-1" src="../../_imgs/blog/anime road/tokyo3.gif">
+		<p id="p1" align="justify"><a href="https://www.youtube.com/watch?v=vGzJOeyJgFM">https://www.youtube.com/watch?v=vGzJOeyJgFM</a></p>-->
+		<p align="justify"> Notice how at a distance, things which are similar sizes in real life (like these cars) will appear to keep their size even when moving towards or away from the camera.  </p>
+		<p align="justify">So animators translated this technique for use in animation. Layout artists drew backgrounds that mimicked the effect of a long lens, and animators drew images which could be panned across it.</p>
+		  <div class="row">
+		  <div class="column2">
+			<img class="size-1" src="../../_imgs/blog/anime road/road 3.gif">
+		  </div>
+		  <div class="column2">
+		    <img class="size-1" src="../../_imgs/blog/anime road/eva road 3.gif">
+		  </div>
+		</div>
+		<p id="p1" align="justify"><a href="https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion"><em>NGE</em></a></p>
+		<p align="justify">Using this method, the layers of animation- whether they be characters walking, cars, horses or whatever- could be simple loops or even still images. The cameraperson would pan a still image or loop very slowly up or down the background. This saves a ton of time, and achieves an effect that feels similar to a real camera.</p>
+		<div><img class="size-2" src="../../_imgs/blog/anime road/escalator 2.gif"></div>
+		<p id="p1"><a href="https://www.youtube.com/watch?v=vGzJOeyJgFM">More NGE</a></p>
+		<p align="justify">The limitations of this are that you have to design the background to feel similar to that of a long lens, which means your camera feels farther from your subject. But that's a problem that could easily be solved by the drawing style you're working in. Since drawings aren't fixed, like lenses, you can have parts of the image drawn to look like a long lens and part to look like a fisheye. Or just distort it until you get what you want. A cartoonier style might help divorce this technique from the real-life photographic principles behind it. </p>
+		<div><img class="size-1" src="../../_imgs/blog/anime road/donkihot2.gif"></div>
+		<p id="p1"><em>"<a href="https://vimeo.com/18871894">Don Kihot</a>,"</em> Vlado Kristl, 1961</p>
+		<p align="justify">Now, lets make an anime road:</p>
+		<p align="justify">The simplest possible anime road format uses 2 drawings: a road, and a car. I'm going to use 3 drawings for mine,counting the background. I drew my assets in my sketchbook, scanned them, and cut them out, ending up with a few transparent PNGs. For the background, I used a picture of the sky i took with my computer webcam.</p>
+		<div><img class="size-1" src="../../_imgs/blog/anime road/ingo road minimal.png"></div>
+		<p align="justify">I composited these together in Adobe Animate- but you can use any animation program that lets you track images across the screen.</p>
+		<p align="justify">The important thing is to pay attention to how the car slows down when it reaches the top of the hill. This is to pretend that the hill "flattens out" at the top, so that the car seems to stop moving.</p>
+		<p align="justify">If we look at an imaginary "side view" of the road, and track where the cars position would be, it matches up with the "flattening."</p>
+		<div><img class="size-2" src="../../_imgs/blog/anime road/cardiagram.png"></div>
+		<p align="justify">Add a little shadow under the car and you're done.</p>
+		<div><img class="size-2" src="../../_imgs/blog/anime road/ingos_road_2.gif"></div>
+		<p id="p1"><a href="http://www.ingoraschka.com/">Ingo Raschka</a> 2019</p>
+		<p align="justify">This technique makes it efficient and easy to get a dimensional feel out of your shots and editing. You can do it in an hour, or spend a week perfecting it. It's versatile, and, it's fun!</p>
+	</article>
+
+		<div id = "blog"></div>
+
+	<footer>
+		<div id = "bottom"></div>
+	</footer>
+</body>
+
+</html>

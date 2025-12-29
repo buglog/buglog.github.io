@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href= "../../_css/style.css">    
+	<script src="../../jquery-3.7.1.min.js"></script> 
+	<script> 
+		$(function(){
+			//$("#diary-links").load("../../_includes/diary-links.html"); 
+			$("#top").load("../../_includes/top.html");
+			$("#socials").load("../../_includes/socials.html");
+			$("#pages").load("../../_includes/page-links.html");
+			$("#blog").load("../../_includes/blog-links.html");
+			$("#buttons").load("../../_includes/buttons.html");
+			$("#bottom").load("../../_includes/bottom.html");
+		});
+	</script>
+</head>
+
+<body>
+    <header>
+        <div id="top"></div>
+		<div id="socials"></div>
+    </header>
+
+    <article id="pan">
+		<h3><a href=#pan>Pan, Tilt, and Track</a></h3>
+		<time datetime="07-03-2019">July 3, 2019</time>
+        <p align="justify">
+            If you are hip to film language you will probably know about "pans." A <a href="https://en.wikipedia.org/wiki/Panning_(camera)">pan</a> is a type of camera movement used in live action film. In animation, a pan means passing a background underneath the camera. When the background slides underneath, the camera feels like it's moving because of its position relative to the background.
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/AnimPan.gif"></div>
+        
+        <p align="justify">
+            But in live action, a pan means the camera swivels left or right. The camera is placed on a tripod with a pivoting head. If the camera operator pans left, it means she swivels the camera horizontally to the left. Swivelling vertically, up or down, has its own name- "tilt."
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/cameraPanz.gif"></div>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/cameraTilt.gif"></div>
+        <p align="justify">
+            So a pan really means that the camera does not move at all. It stands at a spot and pivots, like you would if you stood and turned your head. When you are actually <em>moving the camera</em> while shooting, this is a "tracking shot." Usually the camera is placed either on a <a href="https://en.wikipedia.org/wiki/Camera_dolly">dolly</a>, or on a cart on a set of tracks on the ground (which is where the term "tracking" comes from). The camera could be moving forwards or backwards, side to side or in a curvy irregular path - it all counts as "tracking" short of using a <a href="https://filmglossary.ccnmtl.columbia.edu/term/crane-shot/">crane</a>. You might also notice that tracking shots and pan and tilt aren't mutually exclusive. A camera on a dolly is usually also on a swiveling head, meaning it can pan, tilt, and track all at the same time- you could think of it as if it's a person looking around while walking.
+        </p>
+        <p align="justify"></p>
+
+        <p align="justify">
+            The difference between a pan and a tracking shot matters because audiences experience a movie from the perspective of the camera. This means the audience will be attuned to the cameras movements, and identify themselves with the way the camera moves. If the camera tracks, the audience feels that the camera moves through the set, because it does. If the camera pans or tilts, the audience will feel that the camera is "looking" - but not moving. You don't have to be an expert on film (like i'm not) - or even be aware of this language - to feel these effects on film.
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/lupino-ida-002-steering-camera-on-dolly.jpg"></div>
+        <p id="p1">Ida Lupino preparing to take a tracking shot on a dolly.</p>
+
+        <p align="justify">
+            In <a href="https://conceptartempire.com/cel-animation/">cel animation</a>, on the other hand, the camera never moves- it's fixed to look down at your worktable. All moving camera effects come from moving or replacing the cels beneath the lens. In the case of a pan, this means the background. 
+        </p>
+        <p align="justify">
+            It might seem like the difference between a pan and a tracking shot doesn't matter in animation, but it actually does. Here's how:
+        </p>
+
+        <p align="justify">
+            What a tracking shot gives you that a pan doesn't is <a href="https://en.wikipedia.org/wiki/Parallax"><em>parallax</em></a>. Parallax, in a sentence, is the optical effect that when you're moving, things closer to you seem to move faster, and things that are farther seem slow.
+        </p>
+        <div><img class="size-2" src="http://38.media.tumblr.com/8f71cc19f7e54493b56ef126ee93de14/tumblr_nlnknntbuF1rkj1e8o3_540.gif"></div>
+        <p id="p1">Lateral tracking simulated using parallax in <em><a href="https://en.wikipedia.org/wiki/Whisper_of_the_Heart">Whisper of the Heart</a>.</em>  How many tracking layers do you count? Also do you notice that one of them isn't a tracking layer, but actually an animation sequence?</p>
+
+        <p align="justify">
+            In animation, the way you achieve parallax is to make more than one background layer. You might have a background, and a foreground. Pass them beneath the camera, exactly the way you would do a regular pan - except the top layer moves faster than the layer behind. If you are shooting frame by frame, this means every frame, you might move the background layer two millimeters, and the foreground layer ten millimeters between frames.
+        </p>
+        <p align="justify">
+            What this boils down to is that in a tracking shot, the camera is moving around. And when it moves, it can see new angles. This means that a tracking shot allows the camera to <em>see behind and around</em> things. Thats why when we make parallaxing lateral tracking shots in animation, we have to draw more than one layer- it's because we need to see what's <em>behind</em> the things in front.
+        </p>
+        <div><img class="size-1" src="../../_imgs/blog/faking a rotating camera/zoomTrack.gif"></div>
+        <p align="justify">
+            With pan and tilt on the other hand - in both live action and animation - you get a flat image. Objects don't distort or show parallax in a pan. The image <em>itself</em> will be distorted, but the objects in the image relative to one another will not. This is why 360° photos work - a 360° photo is just a big, flat animation-style pan-and-tilt.
+        </p>
+        <div><img class="size-1" src="../../_imgs/blog/faking a rotating camera/zoomPan.gif"></div>
+        <p align="justify">
+            The confusing thing about this is that when animators use pans, most of the time they use them <em>as tracking shots</em>. Scooby-Doo, Looney Tunes, etc - almost every cartoon in the cel animation industry used single-layer backgrounds with no parallax to stand in for tracking shots. And yet, we understand these to be lateral tracking shots- We understand the camera is supposed to be moving horizontally, not looking around. 
+        </p>
+        <p align="justify">
+            When Scooby is running from a ghost, we understand him to be running down a hallway as the camera tracks alongside, right? By the logic of single-layer backgrounds you might expect it to feel like Scooby is running in a big circle while the camera pans after him - but it doesn't.
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/scoobhall2.gif"></div>
+        <p align="justify">
+            The reason this works is because these backgrounds are <em>drawn</em> - or even <em>coded</em> - to look like tracking shots. Basically this means that we don't see cartoons like this as representing real life- we aren't "tricked," we are simply <em>reading</em> what the animators are telling us.
+        </p>
+        <p align="justify">
+            Drawing a 'true' pan might mean drawing something like this -
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/Pan_True.png"></div>
+
+        <p align="justify">
+            instead of this:
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/Pan_Flat.png"></div>
+        <p align="justify">
+            This is why sometimes, your eye feels more distortion on a flat tracking pan than on a 'true' distorted pan. A 'true' pan, depending on how it's used, can add a ton of depth to your shot, since it's physically analagous to a live action camera pan.
+        </p>
+
+        <p align="justify">
+            Here's a 'true' tilt from Jay Ward's <em>Rocky and Bullwinkle and Friends</em>.
+        </p>
+        <div><img class="size-2" src="../../_imgs/blog/faking a rotating camera/rocky_ladder.gif"></div>
+
+        <p></p>
+        <p align="justify">
+            P.S. - This post is <em>not</em> meant to tell you how and how not to do pans- it's only trying to clear up some things about animated pans by examining their relation to live-action camera effects. The idea is to understand better how these types of effects work with our eyes so that we can have more control over the spatial sense of our cartoons, and maybe pull them a little more into the third dimension without making extra work for ourselves. Animation studios in the late sixties through the eighties used all kinds of pans all the time- sometimes accurate, sometimes totally bullshitted, sometimes with zero spatial sense at all. The only way to <em>really</em> find out the limits of a technique like this is for you to go mess around with it yourself. (✿◠‿◠)
+        </p>
+      
+    </article>
+
+    <footer>
+		<div id = "bottom"></div>
+    </footer>
+
+</body>
