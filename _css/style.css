@@ -74,7 +74,7 @@ h3 { font: 0.7rem "Helvetica"; margin-top: 0.4rem;margin-bottom: 0.0rem; }
 time { font: 0.6rem  "Helvetica"; color:rgb(85, 85, 85); margin-bottom:0.4rem;}
 p    { font: 300  0.63rem  "Helvetica"; margin-bottom:0.4rem; line-height:1.1;  text-align: justify; text-justify: inter-word;}
 img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
-a:hover { display: inline-block; color:black; background-color:#EAFF1D;}
+a:hover {color:black; background-color:#EAFF1D;}
 /*a:visited { background-color:#777; }*/
 div.ex1 { height:500px; overflow:scroll; }   
 .clicky { padding-left: 5%; display: inline-block; margin:0;}
@@ -93,11 +93,11 @@ div.ex1 { height:500px; overflow:scroll; }
 
 /*key*/
 .video { color:rgb(91, 185, 185); }
-#teal { color:rgb(41, 173, 100); }
-#pink { color:rgb(247, 83, 178); }
+.audio { color:rgb(247, 83, 178); }
 #work-headers { color:rgb(99, 99, 99); margin-top:0.5rem }
-.audio { color:rgb(240, 7, 7); }
-.object { color:rgb(85, 85, 85); }
-.other { color:rgb(95, 223, 45); }
+.video { color:rgb(0, 180, 255); }
+.writing { color:rgb(85, 85, 85); }
+.writing { color:#FF00FD; }
+.other { color:rgb(30, 200, 150); }
 
-
+.flex { display: flex;}

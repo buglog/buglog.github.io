@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="tenSource/p5.min.js"></script>
+  <script src="tenSource/p5.dom.min.js"></script>
+  <script src="tenSource/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+	<meta charset="utf-8">
+	<title>learn animation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- link stylesheets. -->
+	<link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Crimson+Text:600">
+	<link rel="stylesheet" href= "css/reset.css">
+	<!-- just replace with "css/debug.css" to see squares. -->
+	<link rel="stylesheet" href= "css/~debug.css">
+	<!-- styling the grid with responsive page design. -->
+	<link rel="stylesheet" href= "css/article.css">
+	<link rel="stylesheet" href= "css/article-image.css">
+	<!-- Choosing the colors, fonts and sizes of the html elements we're gonna use. -->
+	<style>
+		bg * { color: #640076; }
+		h2,p:not(:last-child) { margin-bottom: 0.8rem; }
+		article {margin-top: 1.0rem;}
+		h1   { font: bold 2.0rem "Crimson Text"; } 	/*CARTOON ASSETS*/
+		h2   { font: bold 1.8rem "Crimson Text"; margin-bottom: 0.3rem; margin-top:0.0rem; } /* black, bold */
+		h3   { font: 400  1.5rem "Crimson Text"; background-color: #000000; color:#FF00FD } /* purple on black box */
+		h4   { font: 400  1.1rem "Crimson Text"; background-color:dimgrey; color: springgreen; margin-bottom: 0.1rem; } /* green on black box- for little "examples" */
+		h5   { font: 400  1.1rem "Crimson Text"; background-color:blue; color:white; } /* White on blue-- the directory, links, whatever... */
+		h6   { font: 400  1.5rem "Crimson Text"; background-color:black; color:yellow; } /* Yellow on yellow- see how this pans out lol */ 
+		
+		time { font: 400  1.4rem "Crimson Text"; color:blue; margin-bottom:0.5rem;}
+		p    { font: 400  1.2rem "Crimson Text"; margin-bottom:0.5rem;margin-top:-1.0rem;}
+		time { font: bold  0.8rem "Crimson Text"; margin-bottom: 1.0rem; color:#0006FF; }
+		/* { margin-bottom: 2.0rem; } */
+		img  { margin-bottom: 0.0rem; margin-top:0.0rem;}
+		/* when you hover over a link, it turns purple with green bg */
+		a { box-shadow: inset 0 -0.28em black }
+		a:hover {color:black; background-color:#EAFF1D;}
+		
+		#p1 { font: 400 0.6rem "Crimson Text";}
+    #purple { font: 400 1.0rem "Crimson Text"; color:mediumpurple;}
+	</style>
+	<!-- Making Columns -->
+	<style>
+		*{
+		box-sizing: border-box;
+		}
+	/* Create three equal columns that floats next to each other */
+	.column {
+  		float: left;
+  		width: 33.33%;
+  		padding: 0px;
+  		/*height: 300px;  Should be removed. Only for demonstration */
+		}
+	.column2 {
+  		float: left;
+  		width: 50%;
+  		padding: 0px;
+  		/*height: 300px;  Should be removed. Only for demonstration */
+		}
+	/* Clear floats after the columns */
+	.row:after {
+	  	content: "";
+	  	display: table;
+	  	clear: both;
+		}
+</style>
+</head>
+  <body>
+    <h1><a href="">Ten</a> by <a href="https://ingoraschka.com/">inga waste</a></h1>
+    <p><a>Ten</a> is a ten-frame animation program.</p>
+    <h2>instructions:</h2>
+    <p><span style="color:deeppink">Space</span> pauses or plays the animation.</p>
+    <p>Press the <span style="color:blueviolet">number keys</span> (while paused) to select a frame.</p>
+    <p>Use the <span style="color:blue">mouse</span> to draw in that frame.</p>
+    <h2></h2>
+    <script src="tenSource/ten.js"></script>
+  
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+

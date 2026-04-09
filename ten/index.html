@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href= "../../_css/~debug.css">
+	<link rel="stylesheet" href= "../../_css/style.css">    
+	<script src="../../jquery-3.7.1.min.js"></script> 
+	<script> 
+		$(function(){
+			//$("#diary-links").load("../../_includes/diary-links.html"); 
+			$("#top").load("../../_includes/top.html");
+			$("#socials").load("../../_includes/socials.html");
+			$("#pages").load("../../_includes/page-links.html");
+			$("#blog").load("../../_includes/blog-links.html");
+			$("#buttons").load("../../_includes/buttons.html");
+			$("#bottom").load("../../_includes/bottom.html");
+		});
+	</script>
+</head>
+
+<body>
+	<header id="header">
+		<div id="top" ></div>
+		<div id="socials"></div>
+	</header>
+    <article>
+        <h3><a href="https://ingoraschka.com/software/ten.html">Ten</a> Frames</h3>
+            <time datetime="07-23-2019">July 23, 2019</time>
+
+            <p align="justify">
+              Last month, I wrote a web browser program called <a href="ten.html"><span style="color:mediumvioletred">Ten</span></a>.
+            </p>
+
+            <div class="row">
+		        <div class="column2">
+		            <img class="size-2" src="gifs/smiley.gif">
+		        </div>
+		        <div class="column2">
+		    	    <img class="size-2" src="gifs/arches.gif">
+		        </div>
+		    </div>
+            <div class="row">
+		        <div class="column2">
+		            <img class="size-2" src="gifs/brush.gif">
+		        </div>
+		        <div class="column2">
+		    	    <img class="size-2" src="gifs/megaworm.gif">
+		        </div>
+		    </div>
+
+            <p align="justify">
+              Ten is a ten frame animation program. By pressing each of the number keys, you can access one of ten frames to draw in. Space pauses or plays the frames. The number in the corner of the screen will tell you what frame you are drawing into.
+            </p>
+            <p align="justify">
+              You can also draw into the frames while they are playing. You can get different effects this way. By drawing very slowly, you can get a kind of moving brushstroke.
+            </p>
+            <p align="justify">
+              This mimics a feature in the animation software program TVPaint called stroke recorder, which does the exact same thing- lets you draw while the frames play, creating a moving particle effect, as well as many other types of interesting animation. 
+            </p>
+            <p align="justify">
+              What's unique about my software derives from its only having ten frames.
+            </p>
+            <p align="justify">
+              Since each frame corresponds to a number key, if you pause the animation you can "play" the animation live by pressing the number keys in real time. What this allows you to do is mess around not only with the timing of the animation, but also with the order of the frames. Often when animating I will find that by rearranging frames, i can find types of motion that i didn't originally intend. This type of "live play" is a direct way of finding those alternative arrangements.
+            </p>
+            <p align="justify">
+              The only thing this is missing is a timeline, or a function to actually record and export your animation. For this, I use <span style="color:blue;">Quicktime Player</span>, an application which comes packaged on pretty much every computer. If it's not on your computer, you can <a href="https://support.apple.com/kb/DL837?locale=en_US">download it for free</a>.
+            </p>
+            <p align="justify">
+              To save or record a live-played video, open Quicktime Player and select File -> New Screen Recording. Then drag a box around the Ten window, click on your browser, and start playing your animation. When you want to stop recording, go back to Quicktime Player and press escape, or simply quit the program and Quicktime will prompt you to save.
+            </p>
+            <p align="justify">Then send me your animations and tell me what you think!</p>
+            <p align="justify">
+              Ten was written in <a href="https://p5js.org/"><span style="color:blue">P5.js</span></a>, an implementation of <a href="https://processing.org/">Processing</a> for javascript written by <a href="http://lauren-mccarthy.com/">Lauren McCarthy</a>. Processing is a programming language (or more specifically, a Java library) that makes it very easy to program "drawings," making it ideal for artists, and anyone who wants to make visual programs (and animators). Javascript (which in reality has nothing to do with Java) is an <a href="https://medium.com/@DHGorman/a-crash-course-in-interpreted-vs-compiled-languages-5531978930b6">interpreted</a> scripting language which is supported by virtually all web browsers today. It's the programming language of the web- which means p5 applications run on any webpage, making the software both easier to distribute and easier to use.
+            </p>
+            <p align="justify">
+              If you are interested in learning Processing or P5 (i recommend p5, since it is easier to get started and distribute) the YouTube channel "<a href="https://www.youtube.com/user/shiffman">The Coding Train</a>" hosted by <a href="https://shiffman.net/">Dan Shiffman</a> is an excellent place to get started. If you want to learn javascript first, the free book series <a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a> is how I've been learning- it's very clear, thorough and somewhat beginner-friendly.
+            </p>
+            <p align="justify">To use Ten, <a class="folder-links">click here.</a> If you'd like to download the Ten source code to mess with it, <a class="folder-links" href="tenSource.zip" download>click here</a>.</p>
+            <p id="p1"><a href="https://ingoraschka.com">Ingo Raschka</a> 2019</p>
+	</article>
+
+		<div id = "pages"></div>
+		<div id = "blog"></div>
+		<!--<div id = "blog"></div>-->
+	<!--<div id = "diary-links"></div>-->
+	<!--<ul>	
+	<div id = "buttons"></div>
+	</ul>-->
+
+	<footer>
+		<div id = "bottom"></div>
+	</footer>
+</body>
+
+</html>
